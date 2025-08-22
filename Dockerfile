@@ -11,7 +11,7 @@ WORKDIR /app
 USER root
 
 # Copy the application JAR file
-COPY target/ms-sandbox-service.jar ms-sandbox-service.jar
+COPY target/misc-common-api.jar misc-common-api.jar
 
 # Create directories and user/group safely
 RUN mkdir -p /app/cert/ /app/serviceLog/ && \
@@ -23,4 +23,4 @@ RUN mkdir -p /app/cert/ /app/serviceLog/ && \
 USER ubuntu
 
 # Entry point to run the app
-ENTRYPOINT ["java", "-jar", "ms-sandbox-service.jar"]
+ENTRYPOINT ["java", "-jar", "misc-common-api.jar"]
